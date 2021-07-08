@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema ;
+mongoose.set('debug', true);
 
 const workoutSchema = new Schema({
     day: {
@@ -40,6 +41,9 @@ const workoutSchema = new Schema({
     toJSON: {
         virtuals: true
     }
+},
+{
+    collection : 'workouts'
 }
 );
 
